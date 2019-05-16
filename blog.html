@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2> Welcome to this blog! </h2>
+    <p> I'm {{ author }}, author of this blog. </p>
+    {% if sunny %}
+    <p> Today is Sunny </p>
+    {% else %}
+    <p> Today is rainy </p>
+    {% endif %}
+{% for post in posts %}
+<h2> {{ post.title }} </h2>
+<h3> Author: {{ post.author }} </h3>
+{% endfor %}
+{% endblock %}
